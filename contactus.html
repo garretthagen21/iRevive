@@ -1,0 +1,166 @@
+<!--
+This project is created by group R09
+group member: Jinghang Li
+created date: Dec.4.2016
+-->
+<html>
+	<head>
+		<title>Contact us</title>
+    <script type="text/javascript">
+      function update()
+      {
+        var prefix=document.getElementById("prefix");
+        var firstname=document.getElementById("name1");
+        var lastname=document.getElementById("name2");
+        var type=document.getElementById("type");
+        var Rate=document.getElementsByName("rate");
+        var suggestion=document.getElementById("suggestion");
+      //from here to line23 are Variables for while loop
+        var i=0;
+        var proarray=document.getElementsByName("problem");
+        var listpro=" ";
+        var dn=Array();
+        var j=0;
+        while (i<5) {
+          if (proarray[i].checked==true) {
+            dn=proarray[i].value;
+            j++;
+          }
+          i++;
+        }
+          document.getElementById("span5").innerHTML=dn;
+          document.getElementById("span1").innerHTML=prefix.value;
+          document.getElementById("span2").innerHTML=firstname.value;
+          document.getElementById("span3").innerHTML=lastname.value;
+          document.getElementById("span4").innerHTML=type.value;
+          document.getElementById("span7").innerHTML=suggestion.value;
+    // if statement use for radio box
+      if (Rate[0].checked==true) {
+        document.getElementById("span6").innerHTML=Rate[0].value;
+      }
+      else if (Rate[1].checked==true) {
+        document.getElementById("span6").innerHTML=Rate[1].value;
+      }
+      else if (Rate[2].checked==true) {
+        document.getElementById("span6").innerHTML=Rate[2].value;
+      }
+      else if (Rate[3].checked==true) {
+        document.getElementById("span6").innerHTML=Rate[3].value;
+      }
+      else {
+        document.getElementById("span6").innerHTML=Rate[4].value;
+      }
+
+
+      }
+      // done with the function part
+    </script>
+	</head>
+
+	<body>
+		<table height="100%" width="100%" border="0">
+
+		<tr>
+			<td colspan="2" height="15%">
+				<table width="100%" bgcolor="black">
+					<tr>
+						<td width="20%" align="left">
+						<p><b><font color="cyan" face="helvetica">Team Web Page</p></font></b>
+						</td>
+
+						<td width="*%">
+							<center>
+								<font size="8" color="cyan" face="helvetica">iRevive</font><br>
+								<font size="3" color="cyan" face="helvetica">bring your device back to life</font><br>
+							</center>
+						</td>
+						<td width="20%">
+							<img src="http://www.cellularrepairandexchange.com/wp-content/uploads/2015/04/cracked-iphone1.png" width="130" height="100">
+						</td>
+					</tr>
+				</table>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td width="20%" valign="top" bgcolor="black">
+				<h2 align="center"><font color="red">Menu</font></h2>
+
+				<dl>
+					<dt><a href="teamwebpage.html" target="_blank">Main Page</a></dt>
+
+					<dt><a href="company_mission.html" target="_blank">Company Mission</a></dt>
+
+					<dt><a href="productinfo.html" target="_blank">Product Info</a></dt>
+
+					<dt><a href="prices1.html" target="_blank">Prices</a></dt>
+
+					<dt><a href="somethingelse1.html" target="_blank">Something Else</a></dt>
+
+					<dt><a href="contactus.html" target="_blank"><font color="red">Contact Us</a></dt>
+				</dl>
+
+			</td>
+
+			<td width="%" bgcolor="black">
+      <h2 align=center><font color=gray>Contact us</font></h2>
+      <font color=white><form action="mailto:jil202@pitt.edu" method="post" enctype="text/plain">
+      <address align=center>Email address:<a href="http://jil202@pitt.com">someone@example.com </a>Phone number:4121234567</address>
+      <p align=center><b>Let us know more about you</b></p>
+      <center>
+        <select name="prefix" size="1" id="prefix">
+          <option selected> Mr.
+          <option> Mrs.
+          <option> Miss.
+          <option> Confidential
+          <option> Unknown
+        </select>
+        Enter your first name <input type="text" Name="firstname" id="name1" Value="type your first name here"
+          Size="25" maxlength="30">
+        Enter your last name <input type="text" Name="lastname" id="name2" Value="type your last name here"
+          Size="25" maxlength="30">
+          <br />
+        <p><i>"Tell us what's which kind of service did you purchase?"</i></p>
+      Type of iPhone
+      <!--drop down list-->
+        <select name="type" size="1" id="type">
+          <option selected>iPhone6
+          <option>iPhone6+
+          <option>iPhone6s
+          <option>iPhone6s+
+          <option>unknown
+        </select>
+        <input type="checkbox" Name="problem" id="problem1" value="screen replacement" checked> Screen replacement
+        <input type="checkbox" Name="problem" id="problem2" value="battery replacement" > Battery replacement
+        <input type="checkbox" Name="problem" id="problem3" value="lock button replacement" > Lock button replacment
+        <input type="checkbox" Name="problem" id="problem4" value="home button replacement"> Home button replacment
+        <input type="checkbox" Name="problem" id="problem5" value="others"> Others
+        <p><i>From 6 to 10, how would you like to rate your shopping experience?</i></p>
+        <!--Another radio button-->
+        <input type="radio" name="rate" value="10" checked>10
+        <input type="radio" name="rate" value="9">9
+        <input type="radio" name="rate" value="8">8
+        <input type="radio" name="rate" value="7">7
+        <input type="radio" name="rate" value="6">6
+        <br>
+        <p>Additional suggestion</p>
+        <textarea Name=suggestion id=suggestion rows=8 cols=50 wrap=hard>
+          Type here to tell us what we need to do to make this webpage better!
+        </textarea>
+    </center>
+    <input type=button onclick="update()" value="Click here to submit">
+    <input type="reset" name="resetbutton" value="Reset to beginning">
+	</form></font>
+      <!--Here is the validation-->
+      <font color=white>Customer information: <span id="span1"></span> <span id="span2"></span><span id="span3"></span>
+      <br />
+      Your purchase is: <span id=span4>Cell phone type</span> <span id=span5>Replacement</span>
+      <br />
+      Shopping experience:<span id=span6></span>
+      <br />
+      Suggestion:<span id=span7></span></font>
+			</td>
+	</body>
+
+</html>

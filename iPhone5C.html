@@ -1,0 +1,213 @@
+<html>
+	<head>
+		<title>Repair Form</title>
+<!--
+		<script type="text/javascript">
+      function update()
+      {
+
+        var firstname=document.getElementById("name1");
+        var lastname=document.getElementById("name2");
+        var phone=document.getElementById("phone");
+        var email=document.getElementById("email");
+        var repair=document.getElementById("repair");
+        var payment=document.getElementById("payment");
+        var suggestion=document.getElementById("suggestion");
+				var referral=document.getElementById("referral");
+
+        var complete=1;
+
+
+
+
+          if (firstname.value=="*First Name" || firstname.value==""){
+            complete=0;
+          }
+          if (lastname.value=="*Last Name" || lastname.value==""){
+            complete=0;
+          }
+          if (phone.value=="*Cell Phone" || phone.value==""){
+            complete=0;
+          }
+          if (email.value=="*Email" || email.value==""){
+            complete=0;
+          }
+          if (repair.value=="selectservicetype"){
+            complete=0;
+          }
+          if (payment.value=="selectpaymenttype"){
+            complete=0;
+          }
+
+          if (complete==0){
+            alert("You have not completed all of the required fields. Please do so and then resubsmit the form.");
+          }
+
+//Post results in table
+if (complete==1){
+          document.getElementById("span1").innerHTML="Thanks! We'll get back to you soon about scheduling a repair time.";
+          document.getElementById("span2").innerHTML=firstname.value;
+          document.getElementById("span3").innerHTML=lastname.value;
+          document.getElementById("span4").innerHTML=phone.value;
+          document.getElementById("span5").innerHTML=email.value;
+          document.getElementById("span6").innerHTML=repair.value;
+          document.getElementById("span7").innerHTML=payment.value;
+          document.getElementById("span8").innerHTML=suggestion.value;
+					document.getElementById("span9").innerHTML=referral.value;
+
+
+		 }
+
+
+}
+-->
+  </script>
+	</head>
+<body bgcolor="black">
+<!--  <center><font color="cyan" size=6>iPhone 7+</center></font> -->
+
+  <!--picture of phone-->
+
+	<br>
+	<br>
+	<table width=100%>
+<tr>
+<td align=center valign=middle><img src="iPhone5White.png" width=375px height=375px><br><font color="white" size=6>iPhone 5C</td>
+<td>
+
+      <font color=white>
+
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHKfrnuLen31TQWxgISPRan9dWvMiepBlHHdDlghX6uu_mYQ/viewform?usp=pp_url&entry.2005620554&entry.1065046570&entry.1045781291&entry.1166974658&entry.1569989386&entry.2002476591=iPhone+5C&entry.839337160" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+
+<!--
+      <form action="https://formspree.io/garretthagen21@gmail.com" method="POST" enctype="text/plain">
+
+
+			<p align=center><b>Please fill out the information below:</b></p>
+      <center>
+
+      <center>
+				<input type="text" Name="name1" id="name1" Value="*First Name"
+          Size="25" maxlength="30"></center>
+<br>
+      <center><input type="text" Name="name2" id="name2" Value="*Last Name"
+                Size="25" maxlength="30"></center>
+<br>
+      <center><input type="text" Name="phonenumber" id="phone" Value="*Cell Phone"
+          Size="25" maxlength="30"></center>
+
+<br>
+      <center><input type="text" Name="email" id="email" Value="*Email"
+              Size="25" maxlength="30"></center>
+<br>
+      <center><input type="text" Name="referral" id="referral" Value="Name of Referral"
+          Size="25" maxlength="30"></center>
+<br>
+
+
+
+  <select name="payment" size="1" id="payment">
+                   <option value="selectpaymenttype">Select Payment Type
+                   <option>Venmo
+                   <option>Cash
+                   <option>Paypal
+                   <option>Check
+                   <option>Not sure yet
+
+</select>
+<br>
+<br>
+<select name="repair" size="1" id="repair">
+      <option value="selectservicetype">Select Service Type
+      <option>Glass (Black)			 						 $119.99
+			<option>Glass (White)			 						 $119.99
+			<option>Glass + LCD (Black)            $129.99
+			<option>Glass + LCD (White)            $129.99
+			<option>Home Button                    $49.99
+      <option>Battery Replacement            $59.99
+      <option>Power or Volume Buttons        $59.99
+      <option>Charge Port              			 $59.99
+      <option>Loudspeaker                    $59.99
+		  <option>Earspeaker                     $59.99
+      <option>Camera (Front)                 $59.99
+			<option>Microphone                     $59.99
+      <option>Glowing Apple Logo             $59.99
+
+    </select>
+
+
+
+
+<br>
+
+        <p>Please leave additional comments here:</p>
+        <textarea Name=suggestion id=suggestion rows=8 cols=50 wrap=hard>
+
+
+        </textarea>
+    </center>
+<br>
+<br>
+
+<center>
+
+  <input type="submit" onclick="update()" value="Submit" size=20>
+    <input type="reset" name="resetbutton" value="Reset" size=20></center>
+
+	</form>
+				-->
+</font>
+</td>
+</tr>
+</table>
+
+<!--
+<br>
+    <center>  <font color=cyan>
+<h3><span id="span1"></span></h3>
+</font>
+
+<caption><font color="white">Order Summary<caption>
+<table width=50% align="center" border="1">
+  <tr>
+    <td><font color="white">Name:</td>
+    <td><font color="white"><span id="span2"></span> <span id="span3"></span></td>
+ </tr>
+ <tr>
+    <td><font color="white">Phone:</td>
+      <td><font color="white"><span id="span4"></span></td>
+</tr>
+<tr>
+      <td><font color="white">Email:</td>
+      <td><font color="white"><span id="span5"></span></td>
+  <tr>
+            <td><font color="white">Model:</td>
+            <td><font color="white">iPhone 7+</td>
+</tr>
+
+<tr>
+      <td><font color="white">Service:</td>
+      <td><font color="white"><span id="span6"></span></td>
+</tr>
+<tr>
+      <td><font color="white">Form of Payment: </td>
+      <td><font color="white"><span id="span7"></span></td>
+</tr>
+<tr>
+  <td><font color="white">Referral:</td>
+  <td><font color="white"><span id="span9"></span></td>
+</tr>
+<tr>
+       <td><font color="white">Additional Comments:</td>
+       <td><font color="white"><span id="span8"></span></td>
+</tr>
+
+-->
+</font>
+
+    </center>
+	</body>
+
+</html>
